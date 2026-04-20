@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل تنافسي — delete.sa</title>
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/9Q4yt1p/file.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            950: '#020617',
+                            900: '#0f172a',
+                            800: '#1e293b',
+                        },
+                        brand: {
+                            emerald: '#10b981',
+                            gold: '#f59e0b',
+                            cyan: '#06b6d4',
+                            blue: '#38bdf8',
+                            purple: '#8b5cf6',
+                            pink: '#ec4899',
+                            yellow: '#facc15'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background-color: #020617; 
+            color: #f1f5f9; 
+            scroll-behavior: smooth;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.05) 0%, transparent 20%);
+        }
+
+        /* Custom Scrollbar for tables */
+        .table-container::-webkit-scrollbar {
+            height: 6px;
+        }
+        .table-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: rgba(245, 158, 11, 0.5);
+            border-radius: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(245, 158, 11, 0.8);
+        }
+        
+        .glass-panel { 
+            background: rgba(30, 41, 59, 0.4); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            border-radius: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            background: rgba(30, 41, 59, 0.6);
+            transform: translateY(-5px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #f59e0b 0%, #facc15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Progress bar animation */
+        @keyframes fillBar {
+            from { width: 0; }
+        }
+        .animate-fill {
+            animation: fillBar 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <main class="flex-grow py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <!-- Header Section -->
+        <header class="relative flex flex-col justify-center items-center text-center px-6 overflow-hidden pt-10 pb-12 mb-8">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-gold/10 blur-[120px] rounded-full -z-10 animate-pulse-slow"></div>
+            
+            <div class="relative group mb-6 bg-white/5 py-2 px-6 rounded-full backdrop-blur-sm border border-white/10 animate-float">
+                <span class="text-brand-gold text-sm font-bold tracking-wide">تقرير تحليلي Q3 2026</span>
+            </div>
+            
+            <div class="space-y-4 max-w-4xl relative z-10">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 gradient-text leading-tight">تحليل تنافسي — سوق الحماية الرقمية السعودي</h1>
+                <p class="text-slate-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">مقارنة شاملة وتقييم للأداء الرقمي: الويب سايت، السوشيال ميديا، الحملات الإعلانية، والخدمات المقدمة في مواجهة المنافسين الرئيسيين.</p>
+            </div>
+        </header>
+
+        <!-- Brand Overview Cards -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <!-- Main Brand Card -->
+            <div class="glass-panel p-6 relative overflow-hidden border-t-4 border-t-brand-gold shadow-lg shadow-brand-gold/10">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-brand-gold/10 rounded-bl-full opacity-50 -z-10"></div>
+                <span class="inline-block bg-brand-gold/20 text-brand-gold border border-brand-gold/30 text-xs px-3 py-1 rounded-md mb-4 font-bold shadow-sm">أنتم</span>
+                <h3 class="text-xl font-black text-white mb-1">delete.sa</h3>
+                <p class="text-xs text-slate-400 mb-6 font-medium">التخلص من المخاطر الرقمية</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">الويب سايت</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-gold rounded-full animate-fill shadow-[0_0_10px_rgba(245,158,11,0.5)]" style="width: 65%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">65</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">المحتوى</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-gold rounded-full animate-fill shadow-[0_0_10px_rgba(245,158,11,0.5)]" style="width: 45%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">45</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">السيو</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-gold rounded-full animate-fill shadow-[0_0_10px_rgba(245,158,11,0.5)]" style="width: 40%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">40</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor 1 -->
+            <div class="glass-panel p-6 border-t-4 border-t-brand-cyan hover:border-brand-cyan/50">
+                <span class="inline-block bg-white/5 text-slate-400 border border-white/10 text-xs px-3 py-1 rounded-md mb-4 font-medium">منافس 1</span>
+                <h3 class="text-xl font-bold text-white mb-1">secprint.sa</h3>
+                <p class="text-xs text-slate-400 mb-6 font-medium">بصمة أمان — أزمات السمعة</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">الويب سايت</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-cyan rounded-full animate-fill" style="width: 80%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">80</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">المحتوى</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-cyan rounded-full animate-fill" style="width: 90%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">90</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">السيو</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-cyan rounded-full animate-fill" style="width: 88%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">88</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor 2 -->
+            <div class="glass-panel p-6 border-t-4 border-t-brand-blue hover:border-brand-blue/50">
+                <span class="inline-block bg-white/5 text-slate-400 border border-white/10 text-xs px-3 py-1 rounded-md mb-4 font-medium">منافس 2</span>
+                <h3 class="text-xl font-bold text-white mb-1">secprint.net</h3>
+                <p class="text-xs text-slate-400 mb-6 font-medium">بصمة أمان — النسخة القديمة</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">الويب سايت</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-blue rounded-full animate-fill" style="width: 55%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">55</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">المحتوى</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-blue rounded-full animate-fill" style="width: 65%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">65</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">السيو</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-blue rounded-full animate-fill" style="width: 60%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">60</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor 3 -->
+            <div class="glass-panel p-6 border-t-4 border-t-brand-purple hover:border-brand-purple/50">
+                <span class="inline-block bg-white/5 text-slate-400 border border-white/10 text-xs px-3 py-1 rounded-md mb-4 font-medium">منافس 3</span>
+                <h3 class="text-xl font-bold text-white mb-1">m3k.net</h3>
+                <p class="text-xs text-slate-400 mb-6 font-medium">معك - للحماية من الابتزاز</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">الويب سايت</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-purple rounded-full animate-fill" style="width: 78%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">78</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">المحتوى</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-purple rounded-full animate-fill" style="width: 82%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">82</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-300 font-medium w-16">السيو</span>
+                        <div class="flex-1 h-2 bg-navy-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-purple rounded-full animate-fill" style="width: 75%"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-200">75</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table 1: Website Comparison -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                تحليل الويب سايت
+            </h2>
+            <div class="glass-panel overflow-hidden">
+                <div class="table-container overflow-x-auto w-full">
+                    <table class="w-full text-sm text-right whitespace-nowrap lg:whitespace-normal min-w-[800px]">
+                        <thead class="text-xs text-slate-300 bg-navy-900/50 uppercase font-semibold border-b border-white/10">
+                            <tr>
+                                <th scope="col" class="px-6 py-4 w-1/5">المعيار</th>
+                                <th scope="col" class="px-6 py-4 w-1/5 bg-brand-gold/5 text-brand-gold border-b-2 border-brand-gold">delete.sa</th>
+                                <th scope="col" class="px-6 py-4 w-1/5">secprint.sa</th>
+                                <th scope="col" class="px-6 py-4 w-1/5">secprint.net</th>
+                                <th scope="col" class="px-6 py-4 w-1/5">m3k.net</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">تصميم الصفحة الرئيسية</td>
+                                <td class="px-6 py-4 bg-brand-gold/5 text-slate-300 leading-relaxed">مودرن بفيديو خلفية، نظيف لكن محتوى نصي قليل جداً</td>
+                                <td class="px-6 py-4 text-slate-400 leading-relaxed">احترافي متكامل مع مدونة وصفحات داخلية غنية</td>
+                                <td class="px-6 py-4 text-slate-400 leading-relaxed">بسيط قديم الطراز لكن واضح ومباشر</td>
+                                <td class="px-6 py-4 text-slate-400 leading-relaxed">مودرن وتفاعلي بمحتوى وافر</td>
+                            </tr>
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">صفحات داخلية</td>
+                                <td class="px-6 py-4 bg-brand-gold/5">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-pink/20 text-brand-pink border border-brand-pink/30 mb-2">ضعيف جداً</span><br>
+                                    <span class="text-slate-400 text-xs">صفحة رئيسية شبه وحيدة، لا صفحات تفصيلية</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30 mb-2">ممتاز</span><br>
+                                    <span class="text-slate-400 text-xs">صفحات لكل خدمة، مقالات، أسئلة شائعة</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/30 mb-2">متوسط</span><br>
+                                    <span class="text-slate-400 text-xs">صفحات خدمات لكن بمحتوى محدود</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30 mb-2">جيد</span><br>
+                                    <span class="text-slate-400 text-xs">صفحات خدمات متعددة ومدونة نشطة</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">الأسعار والباقات</td>
+                                <td class="px-6 py-4 bg-brand-gold/5">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-pink/20 text-brand-pink border border-brand-pink/30">غائب - لا توجد أسعار</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">معلن بوضوح</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/30">طلب الخدمة بدون سعر</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/30">تواصل للسعر</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">شهادات العملاء</td>
+                                <td class="px-6 py-4 bg-brand-gold/5"><span class="text-brand-pink font-medium text-xs bg-brand-pink/10 border border-brand-pink/20 px-2 py-1 rounded">لا توجد</span></td>
+                                <td class="px-6 py-4"><span class="text-brand-gold font-medium text-xs bg-brand-gold/10 border border-brand-gold/20 px-2 py-1 rounded">محدودة</span></td>
+                                <td class="px-6 py-4"><span class="text-brand-emerald font-medium text-xs bg-brand-emerald/10 border border-brand-emerald/20 px-2 py-1 rounded">موجودة - تقييمات حقيقية</span></td>
+                                <td class="px-6 py-4"><span class="text-brand-gold font-medium text-xs bg-brand-gold/10 border border-brand-gold/20 px-2 py-1 rounded">محدودة</span></td>
+                            </tr>
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">سرعة التحميل</td>
+                                <td class="px-6 py-4 bg-brand-gold/5">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-pink/20 text-brand-pink border border-brand-pink/30 mb-2">بطيء</span><br>
+                                    <span class="text-slate-400 text-xs">بسبب فيديو الخلفية</span>
+                                </td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">جيد</span></td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">سريع جداً</span></td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/30">متوسط</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table 2: Services Comparison -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                مقارنة الخدمات المقدمة
+            </h2>
+            <div class="glass-panel overflow-hidden">
+                <div class="table-container overflow-x-auto w-full">
+                    <table class="w-full text-sm text-right whitespace-nowrap min-w-[800px]">
+                        <thead class="text-xs text-slate-300 bg-navy-900/50 uppercase font-semibold border-b border-white/10">
+                            <tr>
+                                <th scope="col" class="px-6 py-4 w-1/5">الخدمة</th>
+                                <th scope="col" class="px-6 py-4 w-1/5 bg-brand-gold/5 text-brand-gold border-b-2 border-brand-gold">delete.sa</th>
+                                <th scope="col" class="px-6 py-4 w-1/5">secprint.sa</th>
+                                <th scope="col" class="px-6 py-4 w-1/5">secprint.net</th>
+                                <th scope="col" class="px-6 py-4 w-1/5">m3k.net</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">حذف محتوى مسيء</td>
+                                <td class="px-6 py-4 bg-brand-gold/5"><span class="text-brand-emerald font-bold text-lg">✓</span></td>
+                                <td class="px-6 py-4"><span class="text-brand-emerald font-bold text-lg">✓</span></td>
+                                <td class="px-6 py-4"><span class="text-brand-emerald font-bold text-lg">✓</span></td>
+                                <td class="px-6 py-4"><span class="text-brand-emerald font-bold text-lg">✓</span></td>
+                            </tr>
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">رصد الـ Dark Web</td>
+                                <td class="px-6 py-4 bg-brand-gold/5">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">✓ ميزة تنافسية</span>
+                                </td>
+                                <td class="px-6 py-4"><span class="text-brand-pink text-xs bg-brand-pink/10 border border-brand-pink/20 px-2 py-1 rounded">غير محددة</span></td>
+                                <td class="px-6 py-4"><span class="text-slate-500 font-bold text-lg">✗</span></td>
+                                <td class="px-6 py-4"><span class="text-brand-gold text-xs bg-brand-gold/10 border border-brand-gold/20 px-2 py-1 rounded">جزئي</span></td>
+                            </tr>
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">دعم قانوني</td>
+                                <td class="px-6 py-4 bg-brand-gold/5"><span class="text-brand-pink text-xs bg-brand-pink/10 border border-brand-pink/20 px-2 py-1 rounded">لا يُذكر</span></td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">✓ شراكة قانونية</span></td>
+                                <td class="px-6 py-4"><span class="text-slate-500 font-bold text-lg">✗</span></td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">✓ فريق محامين</span></td>
+                            </tr>
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">استرجاع حسابات مخترقة</td>
+                                <td class="px-6 py-4 bg-brand-gold/5"><span class="text-brand-pink text-xs bg-brand-pink/10 border border-brand-pink/20 px-2 py-1 rounded">لا يُذكر</span></td>
+                                <td class="px-6 py-4"><span class="text-brand-emerald font-bold text-lg">✓</span></td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">✓ سناب/واتس/فيسبوك</span></td>
+                                <td class="px-6 py-4"><span class="text-brand-emerald font-bold text-lg">✓</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table 3: SEO & Content -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <svg class="w-6 h-6 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                السيو والمحتوى التسويقي
+            </h2>
+            <div class="glass-panel overflow-hidden">
+                <div class="table-container overflow-x-auto w-full">
+                    <table class="w-full text-sm text-right whitespace-nowrap min-w-[800px]">
+                        <thead class="text-xs text-slate-300 bg-navy-900/50 uppercase font-semibold border-b border-white/10">
+                            <tr>
+                                <th scope="col" class="px-6 py-4 w-1/5">المعيار</th>
+                                <th scope="col" class="px-6 py-4 w-1/5 bg-brand-gold/5 text-brand-gold border-b-2 border-brand-gold">delete.sa</th>
+                                <th scope="col" class="px-6 py-4 w-1/5">secprint.sa</th>
+                                <th scope="col" class="px-6 py-4 w-1/5">m3k.net</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-white/5">
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">مدونة ومحتوى</td>
+                                <td class="px-6 py-4 bg-brand-gold/5"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/30">موجودة، محتوى شحيح</span></td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">ضخمة - عشرات المقالات</span></td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">نشطة بمقالات SEO</span></td>
+                            </tr>
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">الكلمات المفتاحية</td>
+                                <td class="px-6 py-4 bg-brand-gold/5">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-pink/20 text-brand-pink border border-brand-pink/30 mb-2">ضعيف</span><br>
+                                    <span class="text-slate-400 text-xs">لا تحسين واضح للبحث</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30 mb-2">ممتاز</span><br>
+                                    <span class="text-slate-400 text-xs">يستهدف: ابتزاز، سمعة رقمية</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30 mb-2">جيد</span><br>
+                                    <span class="text-slate-400 text-xs">أمن سيبراني وابتزاز</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-navy-800/50 transition-colors">
+                                <td class="px-6 py-4 font-bold text-white">ظهور نتائج البحث</td>
+                                <td class="px-6 py-4 bg-brand-gold/5"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-pink/20 text-brand-pink border border-brand-pink/30">منخفض - غائب عن الكلمات الأبرز</span></td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">مرتفع جداً - يتصدر النتائج</span></td>
+                                <td class="px-6 py-4"><span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-brand-emerald/20 text-brand-emerald border border-brand-emerald/30">مرتفع</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Grid -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <svg class="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                نقاط القوة والضعف (delete.sa)
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Strengths -->
+                <div class="glass-panel p-6 border-t-4 border-t-brand-emerald">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-brand-emerald/20 flex items-center justify-center text-brand-emerald text-xl border border-brand-emerald/30 shadow-[0_0_15px_rgba(16,185,129,0.3)]">💪</div>
+                        <h3 class="text-xl font-bold text-white">نقاط القوة</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-brand-emerald shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            الاسم التجاري قوي وسهل التذكر (delete) ودومين .sa يعزز الثقة
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-brand-emerald shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            تغطية Dark Web — ميزة نادرة ونظام إنذار استباقي 24/7
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-brand-emerald shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(16,185,129,0.8)]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            تصميم مودرن ومرئي احترافي مع دعم ثنائي اللغة
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Weaknesses -->
+                <div class="glass-panel p-6 border-t-4 border-t-brand-pink">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-brand-pink/20 flex items-center justify-center text-brand-pink text-xl border border-brand-pink/30 shadow-[0_0_15px_rgba(236,72,153,0.3)]">⚠️</div>
+                        <h3 class="text-xl font-bold text-white">نقاط الضعف</h3>
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-brand-pink shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(236,72,153,0.8)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            محتوى الموقع شحيح جداً — صفحة واحدة شبه فارغة ولا استراتيجية سيو
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-brand-pink shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(236,72,153,0.8)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            غياب شبه تام عن السوشيال ميديا (تويتر، سناب شات)
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-slate-300">
+                            <svg class="w-5 h-5 text-brand-pink shrink-0 mt-0.5 drop-shadow-[0_0_5px_rgba(236,72,153,0.8)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                            لا دعم قانوني معلن، لا باقات أسعار، ولا شهادات عملاء حقيقية
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opportunities & Threats -->
+        <section class="mb-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <h2 class="text-xl font-bold text-white mb-6 px-2 flex items-center gap-2"><span class="w-2 h-6 bg-brand-emerald rounded-full inline-block"></span> الفرص المتاحة (Opportunities)</h2>
+                <div class="space-y-4">
+                    <div class="bg-brand-emerald/10 border border-brand-emerald/30 rounded-xl p-5 hover:bg-brand-emerald/20 transition-colors">
+                        <h4 class="text-base font-bold text-brand-emerald mb-2 drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">فئة الشركات والمؤسسات (B2B)</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">السوق السعودي يشهد نمواً في الطلب المؤسسي. إطلاق خدمة B2B بباقات مخصصة سيفتح باب عقود أكبر قيمةً.</p>
+                    </div>
+                    <div class="bg-brand-emerald/10 border border-brand-emerald/30 rounded-xl p-5 hover:bg-brand-emerald/20 transition-colors">
+                        <h4 class="text-base font-bold text-brand-emerald mb-2 drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">قناة يوتيوب تعليمية</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">لا يوجد لاعب رئيسي يهيمن على يوتيوب. سلسلة "كيف تحمي نفسك رقمياً" ستبني ثقة وقاعدة جمهور هائلة.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-white mb-6 px-2 flex items-center gap-2"><span class="w-2 h-6 bg-brand-pink rounded-full inline-block"></span> التهديدات (Threats)</h2>
+                <div class="space-y-4">
+                    <div class="bg-brand-pink/10 border border-brand-pink/30 rounded-xl p-5 hover:bg-brand-pink/20 transition-colors">
+                        <h4 class="text-base font-bold text-brand-pink mb-2 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]">هيمنة secprint.sa على محركات البحث</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">بصمة أمان تتصدر جميع كلمات البحث. بدون استثمار فوري في السيو، لن تجد delete.sa طريقها للعملاء الباحثين.</p>
+                    </div>
+                    <div class="bg-brand-pink/10 border border-brand-pink/30 rounded-xl p-5 hover:bg-brand-pink/20 transition-colors">
+                        <h4 class="text-base font-bold text-brand-pink mb-2 drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]">السوشيال ميديا الغائبة</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">في سوق يعتمد على الثقة، الغياب عن إكس وسناب شات يُفقد المنصة الجمهور الشبابي الأكثر عرضة للابتزاز.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Plan -->
+        <section class="glass-panel p-8 md:p-12 text-white shadow-2xl relative overflow-hidden border-t-4 border-t-brand-purple">
+            <!-- Abstract Shapes -->
+            <div class="absolute top-0 right-0 w-80 h-80 bg-brand-purple rounded-full filter blur-[100px] opacity-20 -translate-y-1/2 translate-x-1/4"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-cyan rounded-full filter blur-[100px] opacity-20 translate-y-1/2 -translate-x-1/4"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-3xl font-black mb-10 flex items-center gap-4">
+                    <span class="bg-brand-purple/20 p-3 rounded-xl backdrop-blur-md border border-brand-purple/30">
+                        <svg class="w-8 h-8 text-brand-purple drop-shadow-[0_0_8px_rgba(139,92,246,0.8)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    </span>
+                    الأولويات الفورية وخطوات العمل
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+                    <!-- Action Item 1 -->
+                    <div class="flex gap-5 group">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-navy-900 border-2 border-brand-gold flex items-center justify-center text-lg font-black text-brand-gold group-hover:bg-brand-gold group-hover:text-navy-900 transition-all shadow-[0_0_10px_rgba(245,158,11,0.3)] group-hover:shadow-[0_0_20px_rgba(245,158,11,0.6)]">1</div>
+                            <div class="w-px h-full bg-white/10 my-3 md:hidden"></div>
+                        </div>
+                        <div class="pb-6 md:pb-0">
+                            <h4 class="font-bold text-xl mb-2 text-white">محتوى الموقع والسيو</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">إنشاء صفحات خدمة منفصلة لكل خدمة، ومدونة أسبوعية بمواضيع SEO (ابتزاز إلكتروني، حذف محتوى، Dark Web).</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Item 2 -->
+                    <div class="flex gap-5 group">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-navy-900 border-2 border-brand-cyan flex items-center justify-center text-lg font-black text-brand-cyan group-hover:bg-brand-cyan group-hover:text-navy-900 transition-all shadow-[0_0_10px_rgba(6,182,212,0.3)] group-hover:shadow-[0_0_20px_rgba(6,182,212,0.6)]">2</div>
+                            <div class="w-px h-full bg-white/10 my-3 md:hidden"></div>
+                        </div>
+                        <div class="pb-6 md:pb-0">
+                            <h4 class="font-bold text-xl mb-2 text-white">السوشيال ميديا (X + Snapchat)</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">إطلاق حساب نشط بمحتوى توعوي يومي. نشر "نصيحة أمنية" و"قضية تم حلها" لبناء المصداقية.</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Item 3 -->
+                    <div class="flex gap-5 group">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-navy-900 border-2 border-brand-pink flex items-center justify-center text-lg font-black text-brand-pink group-hover:bg-brand-pink group-hover:text-navy-900 transition-all shadow-[0_0_10px_rgba(236,72,153,0.3)] group-hover:shadow-[0_0_20px_rgba(236,72,153,0.6)]">3</div>
+                            <div class="w-px h-full bg-white/10 my-3 md:hidden"></div>
+                        </div>
+                        <div class="pb-6 md:pb-0">
+                            <h4 class="font-bold text-xl mb-2 text-white">حملات Google Ads</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">شراء كلمات "ابتزاز إلكتروني"، "حذف صور"، "تشهير رقمي" فورياً — المنافسون يأخذون عملاءك الآن.</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Item 4 -->
+                    <div class="flex gap-5 group">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 rounded-full bg-navy-900 border-2 border-brand-emerald flex items-center justify-center text-lg font-black text-brand-emerald group-hover:bg-brand-emerald group-hover:text-navy-900 transition-all shadow-[0_0_10px_rgba(16,185,129,0.3)] group-hover:shadow-[0_0_20px_rgba(16,185,129,0.6)]">4</div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-2 text-white">الدعم القانوني والأسعار</h4>
+                            <p class="text-sm text-slate-400 leading-relaxed">الإعلان عن شراكة قانونية والإفصاح عن باقات بداية واضحة لتسهيل قرار الشراء ورفع معدل التحويل.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-navy-900/50 border-t border-white/5 py-12 px-6 text-center backdrop-blur-md">
+        <div class="container mx-auto space-y-6">
+            <img src="https://i.ibb.co/9Q4yt1p/file.jpg" alt="Richline Logo" class="h-16 w-auto mx-auto rounded-xl opacity-60">
+            <p class="text-slate-400 text-xs max-w-md mx-auto leading-relaxed">
+                هذا التقرير ملكية فكرية لوكالة ريتش لاين، تم إعداده خصيصاً لتحليل السوق والمنافسين لضمان تفوق العلامة التجارية.
+            </p>
+            <div class="pt-6 border-t border-white/5">
+                <p class="text-[10px] text-slate-600 font-bold tracking-widest uppercase">
+                    STRATEGIC PLAN BY <span class="text-brand-gold">RICHLINE AGENCY</span> &copy; 2026
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
